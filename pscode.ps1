@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-    PScode encoding|decoding strings by specified algorithms.  
+    PScode encoding|decoding strings by specified algorithms.
 .DESCRIPTION
     PScode encodes and decodes regular strings to Base64, Hexa, Binary and vice versa.
 .PARAMETER Method
@@ -21,13 +21,13 @@
 .INPUTS
     Parameter <Method> <Algo> <Value>
 .OUTPUTS
-    Encoded|Decoded specfied string. 
+    Encoded|Decoded specfied string.
 .LINK
     https://umermehmood.com/projects/pscode
 .NOTES
     Author: Umer Mehmood
-    Date:   Sep 25, 2022   
-    Version:    1.0 
+    Dated:   Sep 25, 2022
+    Version:    1.0
 #>
 
 [CmdletBinding(DefaultParameterSetName="set_help")]
@@ -64,7 +64,7 @@ function Banner {
 |  ___/ \___ \ / ___| / _ \ / _  |/ _ \
 | |     ____) | (___ | (_) | (_| | |__/
 |_|    |_____/ \____| \___/ \____|\___|
-"@  
+"@
     Write-Host $t -ForegroundColor Yellow
     Write-Host("`n")
 }
@@ -95,7 +95,7 @@ function en_hex {
     param (
         [string]$get_string
     )
-    $EncodedText = -join ([Byte[]][Char[]]$get_string | ForEach-Object { '{0:x2}' -f $_ }) 
+    $EncodedText = -join ([Byte[]][Char[]]$get_string | ForEach-Object { '{0:x2}' -f $_ })
     Write-Host "[+] HEXA Encoded Text : " -Nonewline; Write-Host $EncodedText -ForegroundColor Blue
 }
 
@@ -110,7 +110,7 @@ function en_binary {
     {
         if ($line -ne "0") {
             $tmp = [Convert]::ToString($Line,2)
-            if ($tmp.length -ne 8) { $zeros = "0" * (8 - $tmp.length); $Encodedtext += $zeros + $tmp } 
+            if ($tmp.length -ne 8) { $zeros = "0" * (8 - $tmp.length); $Encodedtext += $zeros + $tmp }
         }
     }
     Write-Host "[+] BINARY Encoded Text : " -Nonewline; Write-Host $EncodedText -ForegroundColor Blue
@@ -147,7 +147,7 @@ function de_binary {
         $binaryArray = $key  -split '(........)' | Where-Object { $_ };
         ForEach($line in $($binaryArray)) { $_ = [Convert]::ToString([Convert]::ToInt32($line, 2), 16); $DecodedText += [char][byte]"0x$_"}
         Write-Host "[+] BINARY Decoded Text : " -Nonewline; Write-Host $DecodedText -ForegroundColor Green
-    } 
+    }
     else {
         throw "Binary string must be divisible by 8. I.e. a multiple of 8"
     }
@@ -157,23 +157,23 @@ function de_binary {
 
 switch($Method)
 {
-    {$Method -like "Encode"} 
+    {$Method -like "Encode"}
     {
         switch($Algo)
         {
             {$Algo -like "Base64"}
             {
-                write-host $mod1
+                Write-Host $mod1
                 en_base $Value
             }
             {$Algo -like "HEX"}
             {
-                write-host $mod1
+                Write-Host $mod1
                 en_hex $Value
             }
             {$Algo -like "BINARY"}
             {
-                write-host $mod1
+                Write-Host $mod1
                 en_binary $Value
             }
             Default
@@ -184,23 +184,23 @@ switch($Method)
         }
     }
 
-    {$Method -like "Decode"} 
+    {$Method -like "Decode"}
     {
         switch($Algo)
         {
             {$Algo -like "Base64"}
             {
-                write-host $mod2
+                Write-Host $mod2
                 de_base $Value
             }
             {$Algo -like "HEX"}
             {
-                write-host $mod2
+                Write-Host $mod2
                 de_hex $Value
             }
             {$Algo -like "BINARY"}
             {
-                write-host $mod2
+                Write-Host $mod2
                 de_binary $Value
             }
             Default
