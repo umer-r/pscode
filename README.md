@@ -26,7 +26,17 @@ PowerShell script to PScode encodes and decodes regular strings to Base64, Hexa,
 # Usage
 ### On Windows:
 
-![](https://user-images.githubusercontent.com/83476929/203141926-5507ddab-c5ee-4090-9d2a-b1033dd8181e.png)
+![Syntax](https://user-images.githubusercontent.com/83476929/203141926-5507ddab-c5ee-4090-9d2a-b1033dd8181e.png)
+
+### Examples:
+
+![Example](https://user-images.githubusercontent.com/83476929/203342161-c6136220-5fe0-4738-af01-2b1b15a37258.png)
+
+#### For more type in:
+
+```powershell
+  Get-Help pscode.ps1 -examples
+```
 
 # Contact
 
