@@ -1,5 +1,4 @@
-![GitHub top language](https://img.shields.io/github/languages/top/umer-r/pscode)
-
+![GitHub](https://img.shields.io/github/license/umer-r/pscode) ![GitHub top language](https://img.shields.io/github/languages/top/umer-r/pscode) ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/umer-r/pscode)
 
 ## PScode
 
