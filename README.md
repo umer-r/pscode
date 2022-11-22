@@ -4,7 +4,7 @@
 
 ## PScode
 
-PowerShell script to PScode encodes and decodes regular strings to Base64, Hexa, Binary and vice versa.
+PowerShell script (PScode) encodes and decodes regular strings to Base64, Hexa, Binary and vice versa.
 
 # Installation
 #### On windows PowerShell:
