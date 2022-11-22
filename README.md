@@ -1,4 +1,4 @@
-![GitHub](https://img.shields.io/github/license/umer-r/pscode) ![GitHub top language](https://img.shields.io/github/languages/top/umer-r/pscode) ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/umer-r/pscode)
+![GitHub](https://img.shields.io/github/license/umer-r/pscode) ![GitHub top language](https://img.shields.io/github/languages/top/umer-r/pscode) ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/umer-r/pscode) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/umer-r/pscode)
 
 ![Banner](https://user-images.githubusercontent.com/83476929/203339985-025c5160-367a-4c5b-b973-23b7ed1ea22e.png)
 
